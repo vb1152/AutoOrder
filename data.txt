@@ -1,0 +1,11 @@
+sender_email@gmail.com
+Letter subject
+
+
+
+Client: Name of the SHOP
+Address and telephone
+Some other information
+
+Order created: 
+E:/
