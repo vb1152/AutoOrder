@@ -17,7 +17,17 @@ This is python GUI app, that read data.xlsx, calculate order and then create/sen
 ## Usage. 
 This app is used with data from 1C business application (1С:Retail Automated retail outlet and store accounting) for retail store.
 Data about balance and turnovers should be copied to Data sheet. Price list to PriceList sheet. 
-In Reserve sheet user puts down insurance reserve, multiplicity and supplier index. 
+In Reserve sheet user write insurance reserve, multiplicity and supplier index for every scu. 
+When app is opened, it load data about produsers 
+![Open app](/images/main.png)
+
+User can choose producer to create order. 
+![Choose](/images/main.png)
+
+When order created, user can open file and change it, if needed.
+When file is sended successfully - user gets a notification. 
+![Send](/images/main.png)
+
 
 To send emails from user_email@gmail.com user need files token.pickle and credentials. 
 https://developers.google.com/gmail/api/quickstart/python 

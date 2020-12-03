@@ -445,7 +445,7 @@ def update():
     pass
 
 # Window Title 
-window.title("Створення замовлень")
+window.title("Calculate orders")
 
 window.geometry("1400x800")
 
