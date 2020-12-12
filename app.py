@@ -1,12 +1,8 @@
-# module to make GUI
 import tkinter as tk
-# framework to work with excel
 import pandas as pd
 
 # The tkinter.ttk module provides access to the Tk themed widget set
 from tkinter import ttk, INSERT 
-
-# https://xlsxwriter.readthedocs.io/
 import xlsxwriter
 from datetime import datetime
 import os
@@ -25,11 +21,9 @@ from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import mimetypes
-import os
 from apiclient import errors
 from email import encoders
 from datetime import datetime
-
 
 
 window = tk.Tk()
@@ -194,7 +188,6 @@ def quickstart(file_to_send, email_to_send):
     return sent
 
 
-
 # function to make orders 
 def order(list_order):
     # dict to store data from test.xlsx, reading using pd.read_excel 
@@ -240,12 +233,9 @@ def order(list_order):
 
         # calculate Order 
         for l in range(len(data_order)):
-            
             for m in range(data['Data'].index.size):
-                
                 if data_order[l]['Code'] == data['Data'].loc[m, 'Code']:
                     data_order[l]['Order'] = data['Data'].loc[m, 'Sale'] + data_order[l]['ResData'] - data['Data'].loc[m, 'Balance']
-                                        
                     # check if 
                     if data_order[l]['Order'] > data_order[l]['Multipl']:
                         data_order[l]['Order'] = ((data_order[l]['Order'] // data_order[l]['Multipl'])+1)*data_order[l]['Multipl']
@@ -301,8 +291,6 @@ def order(list_order):
 
                     # add SCU name from PriceList. and remove spaces before SCU name
                     data_order[n]['SCU name'] = data['PriceList'].loc[o, 'Name'].strip()
-
-
 
         # add row with sum of overall order to a list of dicts 
         data_order.append({'SCU name': 'Total', 'Sum': order_sum})            
